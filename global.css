@@ -1,0 +1,191 @@
+/* css reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default anchor styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Make images behave predictably */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Form elements inherit font */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*,
+*::before,
+*::after {
+    /* border: 1px solid red !important; */
+}
+
+:root {
+    --viewColor1: rgb(46, 125, 50);
+    --viewColor2: rgb(40, 53, 147);
+    --viewColor3: rgb(241, 248, 246);
+    --viewColor4: rgb(21, 51, 52);
+    --viewColor5: rgb(240, 44, 0);
+    --viewColor6: rgb(0, 121, 107);
+
+    --viewShade1: rgb(33, 33, 33);
+    --viewShade2: rgb(255, 255, 255);
+    --viewShade3: rgb(189, 189, 189);
+    --viewShade4: rgb(97, 97, 97);
+
+    --color1: 46, 125, 50;
+    --color2: 40, 53, 147;
+    --color3: 241, 248, 246;
+    --color4: 21, 51, 52;
+    --color5: 240, 44, 0;
+    --color6: 0, 121, 107;
+
+    --shade1: 33, 33, 33;
+    --shade2: 255, 255, 255;
+    --shade3: 189, 189, 189;
+    --shade4: 97, 97, 97;
+
+    /* all sizes - es, s, r, m, l, el, eel */
+
+    --fontFamily1: 'Courier New', Courier, monospace;
+
+    --fontWeightS: 100;
+    --fontWeightR: 200;
+    --fontWeightM: 300;
+    --fontWeightL: 400;
+
+    --fontSizeS: .7rem;
+    --fontSizeR: 1rem;
+    --fontSizeM: 1.5rem;
+    --fontSizeL: 2rem;
+
+    --marginS: .7rem;
+    --marginR: 1rem;
+    --marginM: 1.5rem;
+    --marginL: 2rem;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    align-content: flex-start;
+
+    color: rgb(var(--shade1));
+    font-size: var(--fontSizeR);
+    font-family: var(--fontFamily1);
+}
+
+h1 {
+    font-size: var(--fontSizeL);
+    margin-bottom: var(--marginR);
+    font-weight: var(--fontWeightL);
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: var(--fontSizeM);
+    margin-bottom: var(--marginR);
+    font-weight: var(--fontWeightM);
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: var(--fontSizeR);
+    font-weight: var(--fontWeightM);
+    text-transform: capitalize;
+}
+
+h4 {
+    font-size: var(--fontSizeS);
+    margin-bottom: var(--marginS);
+}
+
+h5 {
+    font-size: var(--fontSizeS);
+}
+
+p {
+    font-size: var(--fontSizeR);
+    font-weight: var(--fontWeightR);
+}
+
+/* custom classnames */
+.errorText {}
+
+
+/* layout 1 */
+
+/* layout 2 */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 320px;
+    margin: 1rem auto;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.box {
+    background: #eee;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* layout 3 */
