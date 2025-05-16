@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+    /* border: 1px solid red !important; */
+}
+
+
 /* css reset */
 *,
 *::before,
@@ -41,30 +48,6 @@ select {
 table {
     border-collapse: collapse;
     width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*,
-*::before,
-*::after {
-    /* border: 1px solid red !important; */
 }
 
 :root {
