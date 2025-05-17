@@ -1,4 +1,4 @@
-"use strict";
+import { ensureHtmlElement } from "./utility.js";
 const layouts = [
     "components/text.html",
     "components/button.html",
@@ -6,31 +6,46 @@ const layouts = [
     "components/layout2.html",
     "components/layout3.html",
 ];
+//ensure canvas cont is full width
+//read the canvas Cont width
+//read the canvas width
+//ensure the canvas scale changed to fit in the canvas width
+//allow canvas dimensions to be changed
+//allow image to be in the topCont
+//allow image to be moved
+//start matching
 function main() {
     let currentIndex = 0;
-    const container = document.getElementById("layoutContainer");
+    const container = ensureHtmlElement(`#layoutContainer`);
+    let buttonShowing = false;
     async function loadLayout(index) {
-        if (container === null)
-            throw new Error("not seeing container");
         const res = await fetch(layouts[index]);
         const html = await res.text();
         container.innerHTML = html;
     }
     // Initial load
     loadLayout(currentIndex);
-    const nextBtn = document.getElementById("nextBtn");
-    if (nextBtn === null)
-        return;
+    const nextBtn = ensureHtmlElement(`#nextBtn`);
     nextBtn.addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % layouts.length;
         loadLayout(currentIndex);
     });
-    const prevBtn = document.getElementById("prevBtn");
-    if (prevBtn === null)
-        return;
+    const prevBtn = ensureHtmlElement(`#prevBtn`);
     prevBtn.addEventListener("click", () => {
         currentIndex = (currentIndex - 1 + layouts.length) % layouts.length;
         loadLayout(currentIndex);
+    });
+    const bttnCont = ensureHtmlElement(`#bttnCont`);
+    console.log(`$bttnCont`, bttnCont);
+    const visibilityBtn = ensureHtmlElement(`#visibilityBttn`);
+    visibilityBtn.addEventListener("click", () => {
+        buttonShowing = !buttonShowing;
+        if (buttonShowing) {
+            bttnCont.style.display = "flex";
+        }
+        else {
+            bttnCont.style.display = "none";
+        }
     });
 }
 main();

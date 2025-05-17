@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-    /* border: 1px solid red !important; */
+    border: 1px solid red !important;
 }
 
 
@@ -96,7 +96,7 @@ table {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     align-content: flex-start;
 
@@ -139,7 +139,43 @@ p {
     font-weight: var(--fontWeightR);
 }
 
+svg {
+    width: 1rem;
+    aspect-ratio: 1/1;
+}
+
 /* custom classnames */
+#topCont {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    display: grid;
+    align-content: flex-start;
+    gap: .5rem;
+}
+
+#bttnCont {
+    display: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#canvasCont {
+    display: grid;
+    align-content: flex-start;
+    width: 100vw;
+    background-color: pink;
+    overflow: auto;
+}
+
+#canvas {
+    display: grid;
+    align-content: flex-start;
+    width: 2000px;
+    height: 1000px;
+}
+
 .errorText {}
 
 
